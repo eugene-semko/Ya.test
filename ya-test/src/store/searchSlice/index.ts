@@ -13,8 +13,8 @@ const initialState: initialStateType = {
 export const getData = createAsyncThunk(
   "searchSlice/getData",
   async (search: string) => {
-    return fetch(`http://openlibrary.org/search.json?q=${search}`).then((res) =>
-      res.json()
+    return fetch(`https://openlibrary.org/search.json?q=${search}`).then(
+      (res) => res.json()
     );
   }
 );
