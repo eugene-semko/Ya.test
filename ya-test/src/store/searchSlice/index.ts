@@ -13,9 +13,9 @@ const initialState: initialStateType = {
 export const getData = createAsyncThunk(
   "searchSlice/getData",
   async (search: string) => {
-    return fetch(`https://openlibrary.org/search.json?title=${search}`).then(
-      (res) => res.json()
-    );
+    return fetch(
+      `https://openlibrary.org/search.json?${search ? "title=" + search : "q="}`
+    ).then((res) => res.json());
   }
 );
 export const searchSlice = createSlice({

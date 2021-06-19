@@ -38,21 +38,22 @@ export const Main: FC<propsType> = (props) => {
           <Button variant={"primary-search"}>Найти</Button>
         </form>
         <div className="Main__search-result">
-          {status == "loading" ? (
-            <>
-              <div className="Main__loading-title">Загрузка</div>
-              <div className="BookSnippet BookSnippet--animated" />
-              <div className="BookSnippet BookSnippet--animated" />
-              <div className="BookSnippet BookSnippet--animated" />
-              <div className="BookSnippet BookSnippet--animated" />
-            </>
-          ) : status == "success" ? (
-            data.docs.map((item: any, index: number) => {
-              return <BookSnippet key={item.key} data={item} />;
-            })
-          ) : (
-            ""
-          )}
+          {data.docs != null &&
+            (status == "loading" ? (
+              <>
+                <div className="Main__loading-title">Загрузка</div>
+                <div className="BookSnippet BookSnippet--animated" />
+                <div className="BookSnippet BookSnippet--animated" />
+                <div className="BookSnippet BookSnippet--animated" />
+                <div className="BookSnippet BookSnippet--animated" />
+              </>
+            ) : status == "success" ? (
+              data.docs.map((item: any, index: number) => {
+                return <BookSnippet key={item.key} data={item} />;
+              })
+            ) : (
+              ""
+            ))}
         </div>
 
         <div className="Main__search-result__bottom"></div>
