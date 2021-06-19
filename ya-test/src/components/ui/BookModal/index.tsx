@@ -28,9 +28,9 @@ export const BookModal: FC<propsType> = (props) => {
               <p>Дата публикации</p>
             </div>
             <div className="BookModal__description-info-right">
-              <p>{props.data.isbn[0]}</p>
-              <p>{props.data.publisher[0]}</p>
-              <p>{props.data.publish_date[0]}</p>
+              <p>{props.data.isbn?.[0]}</p>
+              <p>{props.data.publisher?.[0]}</p>
+              <p>{props.data.publish_date?.[0]}</p>
             </div>
           </div>
         </div>
