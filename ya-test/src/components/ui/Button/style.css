@@ -1,0 +1,62 @@
+.Button {
+    border: none;
+    border-radius: 4px;
+    width: 20%;
+    height: 56px;
+    font-family: Mulish,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 175.7%;
+    letter-spacing: 0.045em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.Button--primary-search {
+    color: white;
+    background-image: linear-gradient(to right, #5A4FF3, #7C72FF 50%,#A59FFF, #5A4FF3);
+}
+.Button--primary-search svg {
+    margin-right: 6px;
+}
+.Button--primary-search:hover {
+    cursor: pointer;background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+@media screen and (max-width: 1919px) {
+
+}
+
+@media screen and (max-width: 1439px) {
+
+}
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (max-width: 719px) {
+    .Button{
+        width: 23%;
+    }
+    .Button--primary-search svg {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .Button{
+        width: 20%;
+        font-size: 14px;
+    }
+}

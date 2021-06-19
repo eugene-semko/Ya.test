@@ -1,0 +1,66 @@
+.SearchInput {
+    position: relative;
+    width: 73%;
+    height: 48px;
+}
+.SearchInput input{
+    padding-left: 15px;
+    height: 100%;
+    width: 100%;
+    border: 3px solid #BBC8D4;
+    border-radius: 5px;
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 175.7%;
+    /* identical to box height, or 28px */
+
+    display: flex;
+    align-items: center;
+}
+.SearchInput input::placeholder {
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 175.7%;
+
+    display: flex;
+    align-items: center;
+
+    color: #BBC8D4;
+}
+.SearchInput input:focus {
+    outline: none;
+}
+.SearchInput__label svg {
+    width: 30px;
+    height: 30px;
+}
+.SearchInput__label svg path {
+    fill: #BBC8D4;
+}
+.SearchInput__label{
+    position: absolute;
+    right: 0%;
+    top: 28%;
+    margin: auto;
+}
+@media screen and (max-width: 1919px) {
+
+}
+
+@media screen and (max-width: 1439px) {
+
+}
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (max-width: 719px) {
+    .SearchInput {
+        width: 70%;
+    }
+}

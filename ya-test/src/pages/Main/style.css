@@ -1,0 +1,100 @@
+.Main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #F9F9F9;
+    overflow: hidden;
+}
+.Main__wrapper {
+    margin-top: 30px;
+    width: 40%;
+}
+.Main__form {
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    z-index: 1;
+}
+.Main__form-center {
+    top: 200px;
+    z-index: 1;
+    transition: 0.5s;
+    height: 100%;
+    background-color: #F9F9F9;
+}
+.Main__search-result {
+    position: relative;
+    height: 85%;
+    overflow: scroll;
+}
+.Main__search-result::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.Main__search-result {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.Main__search-result__bottom {
+    position: fixed;
+    bottom: 0;
+    opacity: 0.8;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(179.65deg, rgba(249, 249, 249, 0.81) 0.31%, #F9F9F9 96.2%);
+
+}
+@keyframes rainbow {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 25%;
+     }
+     100% {
+         background-position: 0% 50%;
+     }
+ }
+.Main__loading-title {
+    font-family: Mulish,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 175.7%;
+    background-image: repeating-linear-gradient(
+            45deg
+            , #B7C5D1, #EFEFEF, #B7C5D1, #EFEFEF);
+
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: rainbow 3s ease infinite;
+}
+@media screen and (max-width: 1919px) {
+
+}
+
+@media screen and (max-width: 1439px) {
+    .Main__wrapper {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .Main__wrapper {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .Main__wrapper {
+        width: 95%;
+    }
+}
