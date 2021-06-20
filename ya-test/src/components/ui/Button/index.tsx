@@ -11,7 +11,7 @@ export const Button: FC<propsType> = (props) => {
     <button
       className={classNames({
         Button: true,
-        "Button--primary-search": props.variant == "primary-search",
+        [`Button--${props.variant}`]: props.variant,
       })}
       type="submit"
     >

@@ -1,8 +1,9 @@
 import React, { Dispatch, FC, SetStateAction } from "react";
 import "./style.css";
+import { docsType } from "../../../types";
 
 type propsType = {
-  data: any;
+  data: docsType;
   setIsVisible: Dispatch<SetStateAction<boolean>>;
 };
 export const BookModal: FC<propsType> = (props) => {

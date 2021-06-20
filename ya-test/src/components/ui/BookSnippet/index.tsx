@@ -2,9 +2,10 @@ import React, { FC, useState } from "react";
 import "./style.css";
 import { ReactComponent as PlusIcon } from "../../../assets/ui/Plus.svg";
 import { BookModal } from "../BookModal";
+import { docsType } from "../../../types";
 
 type propsType = {
-  data: any;
+  data: docsType;
 };
 export const BookSnippet: FC<propsType> = (props) => {
   const [isVisible, setIsVisible] = useState(false);

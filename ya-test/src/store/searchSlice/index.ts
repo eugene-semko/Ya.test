@@ -1,14 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { currentResponseDataType } from "../../types";
 
 type initialStateType = {
-  currentData: any;
-  status: null | string;
+  currentResponseData: currentResponseDataType;
+  status: string;
 };
 const initialState: initialStateType = {
-  currentData: {
+  currentResponseData: {
     docs: null,
   },
-  status: null,
+  status: "null",
 };
 export const getData = createAsyncThunk(
   "searchSlice/getData",
@@ -26,7 +27,7 @@ export const searchSlice = createSlice({
       state.status = "loading";
     },
     [getData.fulfilled.toString()]: (state, { payload }) => {
-      state.currentData = payload;
+      state.currentResponseData = payload;
       state.status = "success";
     },
     [getData.rejected.toString()]: (state) => {
